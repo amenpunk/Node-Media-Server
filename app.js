@@ -1,6 +1,7 @@
 const NodeMediaServer = require('./');
 
 const config = {
+  logType : 3,
   rtmp: {
     port: 1935,
     chunk_size: 60000,
@@ -23,11 +24,24 @@ const config = {
   auth: {
     api: true,
     api_user: 'admin',
-    api_pass: 'admin',
+    api_pass: 'sudo',
     play: false,
-    publish: false,
+    publish: true,
     secret: 'nodemedia2017privatekey'
   },
+    relay : {
+        ffmpeg: '/usr/bin/ffmpeg',
+        tasks: [
+            {
+                app: 'live',
+                mode: "push",
+                edge: "rtmp://a.rtmp.youtube.com/live2/fc8c-pq7h-gkvc-de45",
+                appendName: false
+
+            }
+        ]
+
+    }
 };
 
 
