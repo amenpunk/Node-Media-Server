@@ -11,10 +11,10 @@ const config = {
   },
   http: {
     port: 8000,
-    mediaroot: './media',
-    webroot: './www',
+// mediaroot: './media',
+// webroot: './www',
     allow_origin: '*',
-    api: true
+// api: true
   },
   https: {
     port: 8443,
@@ -22,12 +22,12 @@ const config = {
     cert: './certificate.pem',
   },
   auth: {
-    api: true,
-    api_user: 'admin',
-    api_pass: 'sudo',
-    play: false,
+// api: true,
+// api_user: 'admin',
+// api_pass: 'sudo',
+    play: true,
     publish: true,
-    secret: 'nodemedia2017privatekey'
+    secret: 'reactnative'
   },
     relay : {
         ffmpeg: '/usr/bin/ffmpeg',
