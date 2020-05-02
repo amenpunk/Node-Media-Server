@@ -6,7 +6,8 @@ axios({
     method: 'POST',
     url: 'https://us-central1-firstfire-f0b06.cloudfunctions.net/API/GetStream',
     data: {
-        Mail : "admin@admin.com" 
+        Mail : "admin@admin.com",
+        apikey : "admin@admin.com" 
     }
 }).then( links => {
     console.log(links.data)
